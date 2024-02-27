@@ -1,8 +1,11 @@
 import re
 import argparse
 from colorama import Fore ,Style
-    
-parser = argparse.ArgumentParser(description='Search for a patterns: ')
+
+# To use this code :
+# We can directly type "python greps.py pattern file_name(1 or more with spaces) argument(1 or more with spaces)" in the terminal itself.
+
+parser = argparse.ArgumentParser(description='Search for patterns: ')
 parser.add_argument('pattern', help='The pattern to search for')
 parser.add_argument('files', nargs='+', help='List of files to search')
 parser.add_argument('--search','-s',action='store_true', help='basic search')
@@ -12,7 +15,7 @@ parser.add_argument('--word', '-w',action='store_true', help='search whole word 
 parser.add_argument('--context','-C', action='store_true', help='context')
 parser.add_argument('--spec', type=int, help='context')
 parser.add_argument('--ignorecase', '-i',action='store_true', help='ignore case')
-parser.add_argument('--invert','-v', action='store_true', help='ignore case')
+parser.add_argument('--invert','-v', action='store_true', help='invert search')
 
 args = parser.parse_args()
 
