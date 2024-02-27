@@ -4,7 +4,7 @@ from colorama import Fore ,Style
 
 # To use this code :
 # We can directly type "python greps.py pattern file_name(1 or more with spaces) argument(1 or more with spaces)" in the terminal itself.
-#For using spec enter "-spec no_of_line" along with context and other optional arguments.
+#For using spec enter "--spec no_of_line" along with context and other optional arguments.
 
 parser = argparse.ArgumentParser(description='Search for patterns: ')
 parser.add_argument('pattern', help='The pattern to search for')
